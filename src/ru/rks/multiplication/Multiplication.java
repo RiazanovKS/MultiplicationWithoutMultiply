@@ -13,7 +13,10 @@ public class Multiplication {
 
     }
 
-
+    /**
+     * Метод, возвращающий целочисленное значение, введенное с клавиатуры.
+     * @return - целочисленное значение, введенное с клавиатуры.
+     */
 
     private static int input() {
         Scanner scanner = new Scanner(System.in);
@@ -22,6 +25,12 @@ public class Multiplication {
         return scanner.nextInt();
     }
 
+    /**
+     * Метод, возвращающий результат произведения двух целочисленных значений.
+     * @param firstFactor - первый множитель
+     * @param secondFactor - второй множитель
+     * @return - целочисленное произведение первого и второго множителя.
+     */
     private static int calculate(int firstFactor, int secondFactor) {
         int result = 0;
 
@@ -69,14 +78,20 @@ public class Multiplication {
         return result;
     }
 
-    private static int sum(int first, int second) {
-        int result = 0;
+    /**
+     * Цикл с параметром реализующий вычисление произведения двух множителей.
+     * @param firstFactor - первый множитель.
+     * @param secondFactor - второй множитель.
+     * @return - результат вычисления произведения первого и второго множителя.
+     */
+    private static int sum(int firstFactor, int secondFactor) {
+        int resultOfSum = 0;
 
-        for (int i = 0; i < first; i++) {
-            result += second;
+        for (int i = 0; i < firstFactor; i++) {
+            resultOfSum += secondFactor;
         }
 
-        return result;
+        return resultOfSum;
     }
 
 }
