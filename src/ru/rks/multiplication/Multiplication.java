@@ -50,17 +50,10 @@ public class Multiplication {
             firstFactor = tmp;
         }
 
-        if (firstFactor > 0) {
-
-            result = sum(firstFactor, secondFactor);
-
-        }
-
         if (firstFactor < 0 && secondFactor > 0) {
+
             firstFactor = -firstFactor;
             secondFactor = - secondFactor;
-
-            result = sum(firstFactor, secondFactor);
 
         }
 
@@ -69,9 +62,8 @@ public class Multiplication {
             firstFactor = -firstFactor;
             secondFactor = -secondFactor;
 
-            result = sum(firstFactor, secondFactor);
-
         }
+        result = sum(firstFactor,secondFactor);
 
         if (firstFactor == 0 || secondFactor == 0) {
             result = 0;
