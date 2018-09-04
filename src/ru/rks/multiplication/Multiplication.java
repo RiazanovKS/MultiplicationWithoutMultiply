@@ -57,6 +57,8 @@ public class Multiplication {
         }
 
         if (firstFactor < 0 && secondFactor > 0) {
+            firstFactor = -firstFactor;
+            secondFactor = - secondFactor;
 
             result = sum(firstFactor, secondFactor);
 
