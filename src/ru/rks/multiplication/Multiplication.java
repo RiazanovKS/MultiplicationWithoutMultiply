@@ -13,18 +13,19 @@ public class Multiplication {
 
     }
 
-    public static int input() {
+
+
+    private static int input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число");
-        int value = scanner.nextInt();
 
-        return value;
+        return scanner.nextInt();
     }
 
-    public static int calculate(int firstFactor, int secondFactor) {
+    private static int calculate(int firstFactor, int secondFactor) {
         int result = 0;
 
-        if(firstFactor>secondFactor) {
+        if(firstFactor>secondFactor&&secondFactor>0) {
 
             int tmp;
             tmp = secondFactor;
@@ -33,7 +34,14 @@ public class Multiplication {
 
         }
 
-        if (firstFactor > 0 && secondFactor > 0) {
+        if(firstFactor>secondFactor&&firstFactor<0){
+            int tmp;
+            tmp = secondFactor;
+            secondFactor = firstFactor;
+            firstFactor = tmp;
+        }
+
+        if (firstFactor > 0) {
 
             result = sum(firstFactor, secondFactor);
 
@@ -61,7 +69,7 @@ public class Multiplication {
         return result;
     }
 
-    public static int sum(int first, int second) {
+    private static int sum(int first, int second) {
         int result = 0;
 
         for (int i = 0; i < first; i++) {
